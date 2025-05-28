@@ -1,0 +1,269 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Sign-up</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--      <form method="POST">-->
+
+<!--          {% csrf_token %}-->
+<!--          <h3>Ru'yhatdan O'tish</h3>-->
+<!--          {{form.as_p}}-->
+<!--          <button type="submit">Yuborish</button>-->
+<!--      </form>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sign Up - Car Catalog</title>-->
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-image: url('https://wallpaperaccess.com/full/803839.jpg');-->
+<!--            background-size: cover;-->
+<!--            background-position: center;-->
+<!--            background-attachment: fixed;-->
+<!--        }-->
+
+<!--        .backdrop {-->
+<!--            backdrop-filter: blur(8px) brightness(0.7);-->
+<!--            background-color: rgba(0, 0, 0, 0.4);-->
+<!--        }-->
+
+<!--        /* Style for form fields */-->
+<!--        .form-input {-->
+<!--            width: 100%;-->
+<!--            padding: 0.75rem;-->
+<!--            border-radius: 0.375rem;-->
+<!--            background-color: rgba(31, 41, 55, 0.8);-->
+<!--            color: white;-->
+<!--            border: 1px solid rgba(75, 85, 99, 0.6);-->
+<!--        }-->
+
+<!--        .form-input:focus {-->
+<!--            outline: none;-->
+<!--            ring: 2px;-->
+<!--            ring-color: rgba(96, 165, 250, 0.5);-->
+<!--        }-->
+
+<!--        .errorlist {-->
+<!--            color: #f87171;-->
+<!--            margin-top: 0.25rem;-->
+<!--            font-size: 0.875rem;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body class="font-sans text-white flex flex-col min-h-screen">-->
+<!--    &lt;!&ndash; Navigation Bar &ndash;&gt;-->
+<!--    <nav class="backdrop p-4 shadow-lg">-->
+<!--        <div class="container mx-auto flex justify-between items-center">-->
+<!--            <h1 class="text-3xl font-extrabold tracking-wide">Car Catalog</h1>-->
+<!--            <div class="flex space-x-4">-->
+<!--                <a href="{% url 'home' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                    Back to Car List-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <main class="flex-grow container mx-auto py-12 px-4">-->
+<!--        <section class="backdrop rounded-xl p-8 shadow-xl max-w-md mx-auto transform hover:scale-105 hover:shadow-2xl transition duration-300">-->
+<!--            <h2 class="text-3xl font-bold text-white mb-6 text-center">Ru'yhatdan O'tish</h2>-->
+<!--            <form method="POST" action="{% url 'signup' %}">-->
+<!--                {% csrf_token %}-->
+
+<!--                {% for field in form %}-->
+<!--                <div class="mb-4">-->
+<!--&lt;!&ndash;                    <label for="{{ field.id_for_label }}" class="block text-gray-200 text-sm font-semibold mb-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                        {{ field.label }}&ndash;&gt;-->
+<!--&lt;!&ndash;                    </label>&ndash;&gt;-->
+<!--                    {{ field }}-->
+<!--                    {% if field.errors %}-->
+<!--                        <ul class="errorlist">-->
+<!--                            {% for error in field.errors %}-->
+<!--                                <li>{{ error }}</li>-->
+<!--                            {% endfor %}-->
+<!--                        </ul>-->
+<!--                    {% endif %}-->
+<!--                </div>-->
+<!--                {% endfor %}-->
+
+<!--                <button type="submit" class="w-full bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-3 rounded-md text-white font-semibold hover:scale-105 transition transform duration-300">-->
+<!--                    Yuborish-->
+<!--                </button>-->
+<!--            </form>-->
+<!--            <p class="text-gray-200 text-sm mt-4 text-center">-->
+<!--                Already have an account? Contact support for login.-->
+<!--            </p>-->
+<!--        </section>-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <footer class="backdrop p-4">-->
+<!--        <div class="container mx-auto text-center text-sm">-->
+<!--            <p>© 2025 Car Catalog. All rights reserved.</p>-->
+<!--        </div>-->
+<!--    </footer>-->
+
+<!--    &lt;!&ndash; Add styling to Django form fields &ndash;&gt;-->
+<!--    <script>-->
+<!--        document.addEventListener('DOMContentLoaded', function() {-->
+<!--            // Style all input fields-->
+<!--            const inputs = document.querySelectorAll('input, select, textarea');-->
+<!--            inputs.forEach(input => {-->
+<!--                input.classList.add('form-input');-->
+<!--            });-->
+
+<!--            // Style the submit button if it's not already styled-->
+<!--            const submitButton = document.querySelector('button[type="submit"]');-->
+<!--            if (!submitButton.classList.contains('bg-gradient-to-r')) {-->
+<!--                submitButton.classList.add('w-full', 'px-4', 'py-3', 'rounded-md', 'text-white', 'font-semibold', 'hover:scale-105', 'transition', 'transform', 'duration-300');-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Car Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/803839.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .backdrop {
+            backdrop-filter: blur(8px) brightness(0.7);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Style for form fields */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            background-color: rgba(31, 41, 55, 0.8);
+            color: white;
+            border: 1px solid rgba(75, 85, 99, 0.6);
+        }
+
+        .form-input:focus {
+            outline: none;
+            ring: 2px;
+            ring-color: rgba(96, 165, 250, 0.5);
+        }
+
+        .errorlist {
+            color: #f87171;
+            margin-top: 0.25rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-white flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="backdrop p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Car Catalog</h1>
+            <div class="flex space-x-4">
+                <a href="{% url 'home' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    Back to Car List
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto py-12 px-4">
+        <section class="backdrop rounded-xl p-8 shadow-xl max-w-md mx-auto transform hover:scale-105 hover:shadow-2xl transition duration-300">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Ru'yhatdan O'tish</h2>
+            <form method="POST" action="{% url 'signup' %}">
+                {% csrf_token %}
+
+                {% for field in form %}
+                <div class="mb-4">
+                    <label class="block text-gray-200 text-sm font-semibold mb-2">
+                        {% if field.name == 'username' %}
+                            Foydalanuvchi ismi
+                        {% elif field.name == 'email' %}
+                            Email
+                        {% elif field.name == 'password1' %}
+                            Parol
+                        {% elif field.name == 'password2' %}
+                            Parolni tasdiqlash
+                        {% else %}
+                            {{ field.label }}
+                        {% endif %}
+                    </label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <ul class="errorlist">
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-3 rounded-md text-white font-semibold hover:scale-105 transition transform duration-300">
+                    Yuborish
+                </button>
+            </form>
+            <p class="text-gray-200 text-sm mt-4 text-center">
+                <a href="{% url 'login' %}" class="text-blue-300 hover:underline" > Have an account ? </a>| Contact support for login.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="backdrop p-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>© 2025 Car Catalog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add styling to Django form fields -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Style all input fields
+            const inputs = document.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.classList.add('form-input');
+            });
+
+            // Style the submit button if it's not already styled
+            const submitButton = document.querySelector('button[type="submit"]');
+            if (!submitButton.classList.contains('bg-gradient-to-r')) {
+                submitButton.classList.add('w-full', 'px-4', 'py-3', 'rounded-md', 'text-white', 'font-semibold', 'hover:scale-105', 'transition', 'transform', 'duration-300');
+            }
+        });
+    </script>
+</body>
+</html>

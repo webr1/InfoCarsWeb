@@ -1,0 +1,109 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--<h2>{{car.Model}}</h2>-->
+<!--<h3>{{car.Marka}}</h3>-->
+<!--<p>{{car.InfoCar}}</p>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>{{ car.Model }} - Car Details</title>-->
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+<!--</head>-->
+<!--<body class="bg-gray-100 font-sans flex flex-col min-h-screen">-->
+<!--    &lt;!&ndash; Navigation Bar &ndash;&gt;-->
+<!--    <nav class="bg-blue-600 text-white p-4 shadow-md">-->
+<!--        <div class="container mx-auto flex justify-between items-center">-->
+<!--            <h1 class="text-2xl font-bold">Car Catalog</h1>-->
+<!--            <div>-->
+<!--                <a href="{% url 'home' %}" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200 transition">Back to Car List</a>-->
+<!--                <a href="{% url 'signup' %}" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200 transition ml-4">Sign Up</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <main class="flex-grow container mx-auto py-8">-->
+<!--        <section class="bg-white p-8 rounded-lg shadow-md max-w-2xl mx-auto">-->
+<!--            <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ car.Model }}</h2>-->
+<!--            <h3 class="text-2xl font-semibold text-blue-600 mb-4">{{ car.Marka }}</h3>-->
+<!--            <p class="text-gray-600 leading-relaxed">{{ car.InfoCar }}</p>-->
+<!--        </section>-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <footer class="bg-gray-800 text-white p-4 mt-16">-->
+<!--        <div class="container mx-auto text-center">-->
+<!--            <p>© 2025 Car Catalog. All rights reserved.</p>-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ car.Model }} - Car Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/824982.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .backdrop {
+            backdrop-filter: blur(8px) brightness(0.7);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans text-white flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="backdrop p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Car Catalog</h1>
+            <div class="flex space-x-4">
+                <a href="{% url 'home' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    Back to Car List
+                </a>
+                <a href="{% url 'signup' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto py-12 px-4">
+        <section class="backdrop rounded-xl p-8 shadow-xl max-w-2xl mx-auto transform hover:scale-105 hover:shadow-2xl transition duration-300">
+            <h2 class="text-3xl font-bold text-white mb-4">{{ car.Model }}</h2>
+            <h3 class="text-2xl font-semibold text-blue-400 mb-4">{{ car.Marka }}</h3>
+            <p class="text-gray-200 leading-relaxed">{{ car.InfoCar }}</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="backdrop p-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>© 2025 Car Catalog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

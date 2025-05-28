@@ -1,0 +1,291 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+
+<!--</head>-->
+<!--    <body>-->
+<!--    <a href="{% url 'signup' %}"> Sign up</a>-->
+
+
+<!--    {% if cars %}-->
+<!--      <h2>Barcha moshinolar</h2>-->
+<!--       {%for car in cars%}-->
+<!--    <a href="{% url 'detail' car.id %}"><li>{{car.Model}} {{car.Marka}}</li></a>-->
+<!--       {% endfor %}-->
+<!--    {% else %}-->
+<!--       <p>Hozircha kitoblar yoq</p>-->
+<!--    {% endif %}-->
+
+
+<!--    </body>-->
+<!--<head>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Car Catalog</title>-->
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-image: url('https://wallpaperaccess.com/full/338668.jpg');-->
+<!--            background-size: cover;-->
+<!--            background-position: center;-->
+<!--            background-attachment: fixed;-->
+<!--        }-->
+
+<!--        .backdrop {-->
+<!--            backdrop-filter: blur(8px) brightness(0.7);-->
+<!--            background-color: rgba(0, 0, 0, 0.4);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body class="font-sans text-white flex flex-col min-h-screen">-->
+
+<!--    &lt;!&ndash; Navigation Bar &ndash;&gt;-->
+<!--    <nav class="backdrop p-4 shadow-lg">-->
+<!--        <div class="container mx-auto flex justify-between items-center">-->
+<!--            <h1 class="text-3xl font-extrabold tracking-wide">Car Information</h1>-->
+<!--            <a href="{% url 'signup' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                Sign Up-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <main class="flex-grow container mx-auto py-12 px-4">-->
+<!--        {% if cars %}-->
+<!--            <h2 class="text-4xl font-bold text-center mb-10">🌌 𝐇𝐚𝐦𝐦𝐚 𝐭𝐮𝐫𝐥𝐚𝐫𝐢 </h2>-->
+<!--            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">-->
+<!--                {% for car in cars %}-->
+<!--                    <a href="{% url 'detail' car.id %}" class="backdrop rounded-xl p-6 shadow-xl transform hover:scale-105 hover:shadow-2xl transition duration-300">-->
+<!--                        <h3 class="text-2xl font-bold">{{ car.Model }} {{ car.Marka }}</h3>-->
+<!--                        <p class="text-sm text-gray-200 mt-2">🔍 Click to view details</p>-->
+<!--                    </a>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        {% else %}-->
+<!--            <p class="text-xl text-center text-gray-200 mt-12">🚫 Hozircha moshinalar yo'q</p>-->
+<!--        {% endif %}-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <footer class="backdrop p-4">-->
+<!--        <div class="container mx-auto text-center text-sm">-->
+<!--            <p>© 2025 Car Catalog. All rights reserved.</p>-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Car Catalog</title>-->
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-image: url('https://wallpaperaccess.com/full/338668.jpg');-->
+<!--            background-size: cover;-->
+<!--            background-position: center;-->
+<!--            background-attachment: fixed;-->
+<!--        }-->
+
+<!--        .backdrop {-->
+<!--            backdrop-filter: blur(8px) brightness(0.7);-->
+<!--            background-color: rgba(0, 0, 0, 0.4);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body class="font-sans text-white flex flex-col min-h-screen">-->
+
+<!--    &lt;!&ndash; Navigation Bar &ndash;&gt;-->
+<!--    <nav class="backdrop p-4 shadow-lg">-->
+<!--        <div class="container mx-auto flex justify-between items-center">-->
+<!--            <h1 class="text-3xl font-extrabold tracking-wide">Car Information</h1>-->
+<!--            <div class="flex space-x-4">-->
+<!--                <a href="{% url 'about' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                    About Us-->
+<!--                </a>-->
+<!--                <a href="{% url 'signup' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                    Sign Up-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <main class="flex-grow container mx-auto py-12 px-4">-->
+<!--        {% if cars %}-->
+<!--            <h2 class="text-4xl font-bold text-center mb-10">🌌 𝐇𝐚𝐦𝐦𝐚 𝐭𝐮𝐫𝐥𝐚𝐫𝐢 </h2>-->
+<!--            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">-->
+<!--                {% for car in cars %}-->
+<!--                    <a href="{% url 'detail' car.id %}" class="backdrop rounded-xl p-6 shadow-xl transform hover:scale-105 hover:shadow-2xl transition duration-300">-->
+<!--                        <h3 class="text-2xl font-bold">{{ car.Model }} {{ car.Marka }}</h3>-->
+<!--                        <p class="text-sm text-gray-200 mt-2">🔍 Click to view details</p>-->
+<!--                    </a>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        {% else %}-->
+<!--            <p class="text-xl text-center text-gray-200 mt-12">🚫 Hozircha moshinalar yo'q</p>-->
+<!--        {% endif %}-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <footer class="backdrop p-4">-->
+<!--        <div class="container mx-auto text-center text-sm">-->
+<!--            <p>© 2025 Car Catalog. All rights reserved.</p>-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Car Catalog</title>-->
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-image: url('https://wallpaperaccess.com/full/338668.jpg');-->
+<!--            background-size: cover;-->
+<!--            background-position: center;-->
+<!--            background-attachment: fixed;-->
+<!--        }-->
+<!--        .backdrop {-->
+<!--            backdrop-filter: blur(8px) brightness(0.7);-->
+<!--            background-color: rgba(0, 0, 0, 0.4);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body class="font-sans text-white flex flex-col min-h-screen">-->
+
+<!--    &lt;!&ndash; Navigation Bar &ndash;&gt;-->
+<!--    <nav class="backdrop p-4 shadow-lg">-->
+<!--        <div class="container mx-auto flex justify-between items-center">-->
+<!--            <h1 class="text-3xl font-extrabold tracking-wide">Car Information</h1>-->
+<!--            <div class="flex space-x-4">-->
+<!--                <a href="{% url 'about' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                    About Us-->
+<!--                </a>-->
+<!--                {% if user.is_authenticated %}-->
+<!--                    <form action="{% url 'logout' %}" method="get" class="m-0">-->
+<!--                        {% csrf_token %}-->
+<!--                        <button type="submit" class="bg-gradient-to-r from-red-500 to-pink-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                            Logout-->
+<!--                        </button>-->
+<!--                    </form>-->
+<!--                {% else %}-->
+<!--                    <a href="{% url 'login' %}" class="bg-gradient-to-r from-green-500 to-teal-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                        Login-->
+<!--                    </a>-->
+<!--                    <a href="{% url 'signup' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">-->
+<!--                        Sign Up-->
+<!--                    </a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--    <main class="flex-grow container mx-auto py-12 px-4">-->
+<!--        {% if cars %}-->
+<!--            <h2 class="text-4xl font-bold text-center mb-10">🌌 𝐇𝐚𝐦𝐦𝐚 𝐭𝐮𝐫𝐥𝐚𝐫𝐢 </h2>-->
+<!--            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">-->
+<!--                {% for car in cars %}-->
+<!--                    <a href="{% url 'detail' car.id %}" class="backdrop rounded-xl p-6 shadow-xl transform hover:scale-105 hover:shadow-2xl transition duration-300">-->
+<!--                        <h3 class="text-2xl font-bold">{{ car.Model }} {{ car.Marka }}</h3>-->
+<!--                        <p class="text-sm text-gray-200 mt-2">🔍 Click to view details</p>-->
+<!--                    </a>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        {% else %}-->
+<!--            <p class="text-xl text-center text-gray-200 mt-12">🚫 Hozircha moshinalar yo'q</p>-->
+<!--        {% endif %}-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <footer class="backdrop p-4">-->
+<!--        <div class="container mx-auto text-center text-sm">-->
+<!--            <p>© 2025 Car Catalog. All rights reserved.</p>-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/338668.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .backdrop {
+            backdrop-filter: blur(8px) brightness(0.7);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans text-white flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="backdrop p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Car Information</h1>
+            <div class="flex space-x-4">
+                <a href="{% url 'about' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    About Us
+                </a>
+                <a href="{% url 'login' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    Sign In
+                </a>
+                <form action="{% url 'logout' %}" method="get" class="m-0">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                        Sign Out
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto py-12 px-4">
+        {% if cars %}
+            <h2 class="text-4xl font-bold text-center mb-10">🌌 𝐇𝐚𝐦𝐦𝐚 𝐭𝐮𝐫𝐥𝐚𝐫𝐢 </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for car in cars %}
+                    <div class="backdrop rounded-xl p-6 shadow-xl transform hover:scale-105 hover:shadow-2xl transition duration-300">
+                        <h3 class="text-2xl font-bold">{{ car.Model }} {{ car.Marka }}</h3>
+                        <a href="{% url 'detail' car.id %}" class="inline-block mt-4 bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                            Details
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-xl text-center text-gray-200 mt-12">🚫 Hozircha moshinalar yo'q</p>
+        {% endif %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="backdrop p-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>© 2025 Car Catalog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

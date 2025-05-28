@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Car Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/803851.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .backdrop {
+            backdrop-filter: blur(8px) brightness(0.7);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans text-white flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="backdrop p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Car Information</h1>
+            <div class="flex space-x-4">
+                <a href="{% url 'home' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    Home
+                </a>
+                <a href="{% url 'signup' %}" class="bg-gradient-to-r from-blue-400 to-purple-600 px-4 py-2 rounded-md text-white hover:scale-105 transition transform duration-300">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto py-12 px-4 backdrop rounded-xl max-w-4xl my-8">
+        <div class="p-8">
+            <h2 class="text-4xl font-bold text-center mb-8">About AutoVision</h2>
+
+            <div class="space-y-6 text-lg">
+                <p>
+                    Welcome to <span class="font-bold text-purple-300">AutoVision</span>, your premier destination for comprehensive car information and reviews.
+                    Founded in 2015, we've been revolutionizing the way car enthusiasts discover and learn about vehicles.
+                </p>
+
+                <div class="bg-gray-800 bg-opacity-60 p-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-300"> What We Do</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Provide detailed specifications for over 5,000 car models</li>
+                        <li>Offer expert reviews and comparisons</li>
+                        <li>Track market prices and trends</li>
+                        <li>Connect buyers with trusted dealerships</li>
+                        <li>Publish the latest automotive news</li>
+                    </ul>
+                </div>
+
+                <p>
+                    Our team of <span class="font-bold">25 automotive experts</span> works tirelessly to bring you the most accurate and up-to-date information.
+                    We test drive every vehicle we review and verify all technical specifications with manufacturers.
+                </p>
+
+                <div class="bg-gray-800 bg-opacity-60 p-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-300"> Our Mission</h3>
+                    <p>
+                        To empower car buyers and enthusiasts with transparent, unbiased information that helps them make
+                        informed decisions about their automotive purchases.
+                    </p>
+                </div>
+
+                <p>
+                    Whether you're looking for a family SUV, a sporty coupe, or an eco-friendly hybrid,
+                    AutoVision has the information you need to find your perfect match.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="backdrop p-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>© 2025 AutoVision. All rights reserved.</p>
+            <p class="mt-2 text-gray-300">Contact us: info@autovision.com | +998 90-345-67-89</p>
+        </div>
+    </footer>
+</body>
+</html>
